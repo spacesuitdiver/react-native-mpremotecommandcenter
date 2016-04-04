@@ -5,7 +5,7 @@ var DeviceEventEmitter = require('react-native').DeviceEventEmitter;
 
 var listeners = {};
 
-var RNMPRemoteCommandCenter = {
+module.exports = {
   setNowPlayingInfo: function (info) {
     RNMPRemoteCommandCenter.setNowPlayingInfo(info);
   },
@@ -22,5 +22,3 @@ var RNMPRemoteCommandCenter = {
     listeners[cb] = null;
   }
 };
-
-module.exports = RNMPRemoteCommandCenter;
