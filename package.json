@@ -1,0 +1,15 @@
+{
+  "name": "react-native-mpremotecommandcenter",
+  "version": "1.0.0",
+  "description": "Control iOS command center with React Native",
+  "main": "index",
+  "author": {
+    "name": "Chris LeBlanc",
+    "email": "chris@leblaaanc.com",
+    "url": "https://github.com/LeBlaaanc/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:leblaaanc/react-native-mpremotecommandcenter.git"
+  }
+}
