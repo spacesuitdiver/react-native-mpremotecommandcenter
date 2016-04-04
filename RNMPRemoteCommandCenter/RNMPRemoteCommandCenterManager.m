@@ -1,19 +1,19 @@
 //
-//  RNMPRemoteCommandCenter.m
-//  RNMPRemoteCommandCenter
+//  RNMPRemoteCommandCenterManager.m
+//  RNMPRemoteCommandCenterManager
 //
 //  Created by Chris LeBlanc on 4/4/16.
 //  Copyright © 2016 Clever Lever. All rights reserved.
 //
 
-#import "RNMPRemoteCommandCenter.h"
+#import "RNMPRemoteCommandCenterManager.h"
 
-#import "RCTBridgeModule.h"
+#import "RCTBridge.h"
 #import "RCTEventDispatcher.h"
 #import "RCTConvert.h"
 @import MediaPlayer;
 
-@implementation RNMPRemoteCommandCenter
+@implementation RNMPRemoteCommandCenterManager
 
 RCT_EXPORT_MODULE();
 

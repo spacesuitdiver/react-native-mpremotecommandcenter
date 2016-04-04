@@ -1,6 +1,6 @@
 'use strict';
 
-var RNMPRemoteCommandCenter = require('react-native').NativeModules.RNMPRemoteCommandCenter;
+var RNMPRemoteCommandCenter = require('react-native').NativeModules.RNMPRemoteCommandCenterManager;
 var DeviceEventEmitter = require('react-native').DeviceEventEmitter;
 
 var listeners = {};

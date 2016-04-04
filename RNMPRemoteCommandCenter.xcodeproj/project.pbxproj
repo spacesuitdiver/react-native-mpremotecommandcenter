@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2C73D481CB2E12700DED436 /* RNMPRemoteCommandCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A2C73D471CB2E12700DED436 /* RNMPRemoteCommandCenter.h */; };
-		A2C73D4A1CB2E12700DED436 /* RNMPRemoteCommandCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C73D491CB2E12700DED436 /* RNMPRemoteCommandCenter.m */; };
+		A2C73D481CB2E12700DED436 /* RNMPRemoteCommandCenterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A2C73D471CB2E12700DED436 /* RNMPRemoteCommandCenterManager.h */; };
+		A2C73D4A1CB2E12700DED436 /* RNMPRemoteCommandCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C73D491CB2E12700DED436 /* RNMPRemoteCommandCenterManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A2C73D441CB2E12700DED436 /* libRNMPRemoteCommandCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNMPRemoteCommandCenter.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2C73D471CB2E12700DED436 /* RNMPRemoteCommandCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNMPRemoteCommandCenter.h; sourceTree = "<group>"; };
-		A2C73D491CB2E12700DED436 /* RNMPRemoteCommandCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNMPRemoteCommandCenter.m; sourceTree = "<group>"; };
+		A2C73D471CB2E12700DED436 /* RNMPRemoteCommandCenterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNMPRemoteCommandCenterManager.h; sourceTree = "<group>"; };
+		A2C73D491CB2E12700DED436 /* RNMPRemoteCommandCenterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNMPRemoteCommandCenterManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +47,8 @@
 		A2C73D461CB2E12700DED436 /* RNMPRemoteCommandCenter */ = {
 			isa = PBXGroup;
 			children = (
-				A2C73D471CB2E12700DED436 /* RNMPRemoteCommandCenter.h */,
-				A2C73D491CB2E12700DED436 /* RNMPRemoteCommandCenter.m */,
+				A2C73D471CB2E12700DED436 /* RNMPRemoteCommandCenterManager.h */,
+				A2C73D491CB2E12700DED436 /* RNMPRemoteCommandCenterManager.m */,
 			);
 			path = RNMPRemoteCommandCenter;
 			sourceTree = "<group>";
@@ -60,7 +60,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C73D481CB2E12700DED436 /* RNMPRemoteCommandCenter.h in Headers */,
+				A2C73D481CB2E12700DED436 /* RNMPRemoteCommandCenterManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C73D4A1CB2E12700DED436 /* RNMPRemoteCommandCenter.m in Sources */,
+				A2C73D4A1CB2E12700DED436 /* RNMPRemoteCommandCenterManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,14 +145,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -164,14 +160,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../React",
-					"$(SRCROOT)/../react-native/React/**",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos9.3;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -193,26 +185,20 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../React",
-					"$(SRCROOT)/../react-native/React/**",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos9.3;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -220,7 +206,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -228,7 +221,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
