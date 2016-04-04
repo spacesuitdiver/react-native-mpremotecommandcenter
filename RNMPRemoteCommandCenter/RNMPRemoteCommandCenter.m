@@ -21,13 +21,10 @@ RCT_EXPORT_MODULE();
 
 // public api
 
-RCT_REMAP_METHOD(
-    setNowPlayingInfo:(NSDictionary *)info,
-    resolver:(RCTPromiseResolveBlock)resolve,
-    rejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(setNowPlayingInfo:(NSDictionary *)info)
 {
     NSString *albumTitle = [RCTConvert NSString:info[@"albumTitle"]];
-    NSString *artist = [RCTConvert NSString:info[@"albumArtist"]];
+    NSString *albumArtist = [RCTConvert NSString:info[@"albumArtist"]];
     NSString *title = [RCTConvert NSString:info[@"title"]];
     NSString *artworkURL = [RCTConvert NSString:info[@"artworkURL"]];
     NSNumber *duration = [RCTConvert NSNumber:info[@"duration"]];
