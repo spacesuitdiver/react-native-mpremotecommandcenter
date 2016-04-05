@@ -19,6 +19,16 @@ RCT_EXPORT_MODULE();
 
 @synthesize bridge = _bridge;
 
+- (RNMPRemoteCommandCenterManager *)init
+{
+    self = [super init];
+    if (self) {
+        [self registerRemoteControlEvents];
+    }
+    
+    return self;
+}
+
 // public api
 
 RCT_EXPORT_METHOD(setNowPlayingInfo:(NSDictionary *)info)
