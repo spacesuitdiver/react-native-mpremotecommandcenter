@@ -98,6 +98,8 @@ RCT_EXPORT_METHOD(setNowPlayingInfo:(NSDictionary *)info)
     MPRemoteCommandCenter *commandCenter = [MPRemoteCommandCenter sharedCommandCenter];
     [commandCenter.playCommand removeTarget:self];
     [commandCenter.pauseCommand removeTarget:self];
+    [commandCenter.nextTrackCommand removeTarget:self];
+    [commandCenter.previousTrackCommand removeTarget:self];
 }
 
 
