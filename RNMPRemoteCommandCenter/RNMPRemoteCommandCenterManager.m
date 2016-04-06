@@ -37,6 +37,7 @@ RCT_EXPORT_METHOD(setNowPlayingInfo:(NSDictionary *)info)
     NSString *albumArtist = [RCTConvert NSString:info[@"albumArtist"]];
     NSString *title = [RCTConvert NSString:info[@"title"]];
     NSString *artworkURL = [RCTConvert NSString:info[@"artworkURL"]];
+    NSNumber *elapsedPlaybackTime = [RCTConvert NSNumber:info[@"elapsedPlaybackTime"]];
     NSNumber *duration = [RCTConvert NSNumber:info[@"duration"]];
     
     NSURL *url = [[NSURL alloc]initWithString:artworkURL];
@@ -49,7 +50,9 @@ RCT_EXPORT_METHOD(setNowPlayingInfo:(NSDictionary *)info)
         albumTitle, MPMediaItemPropertyAlbumTitle, 
         albumArtist, MPMediaItemPropertyAlbumArtist, 
         title, MPMediaItemPropertyTitle, 
-        artwork, MPMediaItemPropertyArtwork, nil];
+        artwork, MPMediaItemPropertyArtwork,
+        elapsedPlaybackTime, MPNowPlayingInfoPropertyElapsedPlaybackTime,
+                                    nil];
     [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = nowPlayingInfo;
 }
 
