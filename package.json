@@ -1,6 +1,6 @@
 {
   "name": "react-native-mpremotecommandcenter",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Control iOS command center with React Native",
   "main": "index",
   "author": {

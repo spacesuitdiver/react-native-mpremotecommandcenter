@@ -37,8 +37,8 @@ RCT_EXPORT_METHOD(setNowPlayingInfo:(NSDictionary *)info)
     NSString *albumArtist = [RCTConvert NSString:info[@"albumArtist"]];
     NSString *title = [RCTConvert NSString:info[@"title"]];
     NSString *artworkURL = [RCTConvert NSString:info[@"artworkURL"]];
+    NSString *duration = [RCTConvert NSNumber:info[@"duration"]];
     NSNumber *elapsedPlaybackTime = [RCTConvert NSNumber:info[@"elapsedPlaybackTime"]];
-    NSNumber *duration = [RCTConvert NSNumber:info[@"duration"]];
     
     NSURL *url = [[NSURL alloc]initWithString:artworkURL];
     NSData * data = [NSData dataWithContentsOfURL:url];
