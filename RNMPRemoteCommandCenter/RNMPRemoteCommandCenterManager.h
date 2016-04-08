@@ -12,5 +12,6 @@
 @interface RNMPRemoteCommandCenterManager : NSObject <RCTBridgeModule>
 
 - (void)setNowPlayingInfo: (NSDictionary*)info;
+- (void)setElapsedPlaybackTime: (nonnull NSNumber*)elapsedPlaybackTime;
 
 @end

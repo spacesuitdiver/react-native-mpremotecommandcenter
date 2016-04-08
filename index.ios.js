@@ -11,6 +11,10 @@ module.exports = {
     RNMPRemoteCommandCenter.setNowPlayingInfo(info);
   },
 
+  setElapsedPlaybackTime: function(elapsedPlaybackTime) {
+    RNMPRemoteCommandCenter.setElapsedPlaybackTime(elapsedPlaybackTime);
+  },
+
   addListener: function(cb) {
     listeners[cb] = DeviceEventEmitter.addListener('RNMPRemoteCommandCenterEvent', cb);
   },

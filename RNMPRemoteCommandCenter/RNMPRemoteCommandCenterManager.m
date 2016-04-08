@@ -56,6 +56,14 @@ RCT_EXPORT_METHOD(setNowPlayingInfo:(NSDictionary *)info)
     [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = nowPlayingInfo;
 }
 
+RCT_EXPORT_METHOD(setElapsedPlaybackTime:(nonnull NSNumber *)elapsedPlaybackTime)
+{
+    NSMutableDictionary *nowPlayingInfo = [[MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo mutableCopy];
+    [nowPlayingInfo setObject:elapsedPlaybackTime forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
+
+    [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = nowPlayingInfo;
+}
+
 // event handling
 
 - (void)registerRemoteControlEvents
@@ -90,7 +98,7 @@ RCT_EXPORT_METHOD(setNowPlayingInfo:(NSDictionary *)info)
 - (void)didReceivePreviousTrackCommand:(MPRemoteCommand *)event
 {
     [self.bridge.eventDispatcher sendDeviceEventWithName:@"RNMPRemoteCommandCenterEvent"
-                                                    body:@"prevTrack"];
+                                                    body:@"previousTrack"];
 }
 
 - (void)unregisterRemoteControlEvents
