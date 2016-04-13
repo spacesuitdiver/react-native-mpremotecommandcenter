@@ -33,6 +33,7 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(setNowPlayingInfo:(NSDictionary *)info)
 {
+    NSString *artist = [RCTConvert NSString:info[@"artist"]];
     NSString *albumTitle = [RCTConvert NSString:info[@"albumTitle"]];
     NSString *albumArtist = [RCTConvert NSString:info[@"albumArtist"]];
     NSString *title = [RCTConvert NSString:info[@"title"]];
@@ -46,6 +47,7 @@ RCT_EXPORT_METHOD(setNowPlayingInfo:(NSDictionary *)info)
     
     MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc]initWithImage:image];
     NSDictionary *nowPlayingInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+        artist, MPMediaItemPropertyArtist,
         duration, MPMediaItemPropertyPlaybackDuration,
         albumTitle, MPMediaItemPropertyAlbumTitle, 
         albumArtist, MPMediaItemPropertyAlbumArtist, 
